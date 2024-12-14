@@ -12,19 +12,24 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" />
-    <title>Mini Proyectos</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="./index.js"></script>
+    <title>Adivina el Número</title>
 </head>
 
 <body>
-    <h1>Mini Proyectos</h1>
-    <div class="card" style="width: 18rem;">
-        <img src="./img/guess.png" class="card-img-top" alt="GuessNumber">
-        <div class="card-body">
-            <h5 class="card-title">Guess Number</h5>
-            <p class="card-text">Juego de Adivinar el número</p>
-            <a href="./GuessNumber/index.html" class="btn btn-primary">Ir</a>
+    <a href="../index.html" class="btn btn-primary a"><i class="bi bi-house fs-2"></i> Home</a>
+    <h1>Bienvenido al Juego Adivina el Número</h1>
+    <p>En este juego la máquina generará un número entero aleatorio dentro del rango que tu elijas y tendras la cantidad
+        de intentos que tu asignes, una vez que se acaben los intentos habrás perdido la partida.</p>
+    <div class="input">
+        <h3>Ingresa tu nombre</h3>
+        <div class="input-group mb-3">
+            <input id="nameInput" type="text" class="form-control" placeholder="nombre">
+            <button class="btn btn-info" type="button" id="btnOk">OK</button>
         </div>
     </div>
+    <div class="name"></div>
 </body>
 
 </html>

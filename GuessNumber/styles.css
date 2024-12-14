@@ -1,0 +1,39 @@
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    /* Elimina márgenes predeterminados */
+    height: 100vh;
+    /* Ocupa toda la altura del viewport */
+    display: flex;
+    /* Activa Flexbox */
+    flex-direction: column;
+    /* Apila los elementos verticalmente */
+    justify-content: center;
+    /* Centra verticalmente */
+    align-items: center;
+    /* Centra horizontalmente */
+    text-align: center;
+}
+
+h1 {
+    color: chartreuse;
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.name,
+p {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 5% 10%;
+}
+
+.a{
+    font-size: 20px;
+}
+
+.input-group {
+    width: 250px;
+}
