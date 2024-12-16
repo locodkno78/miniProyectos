@@ -1,0 +1,92 @@
+body {
+    background-color: black;
+    color: white;
+    margin: 2% 0;
+    /* Elimina márgenes predeterminados */
+    height: 100vh;
+    /* Ocupa toda la altura del viewport */
+    display: flex;
+    /* Activa Flexbox */
+    flex-direction: column;
+    /* Apila los elementos verticalmente */
+    justify-content: center;
+    /* Centra verticalmente */
+    align-items: center;
+    /* Centra horizontalmente */
+    text-align: center;
+}
+
+h1 {
+    color: chartreuse;
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;    
+}
+
+p {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 3% 10%;
+}
+
+.input-group {
+    width: 250px;
+}
+
+.gameBoard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    background-color: rgb(248, 244, 7);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    position: relative;
+    cursor: pointer;
+}
+
+.card .front,
+.card .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    border-radius: 5px;
+}
+
+.card .front {
+    background-color: #444;
+    /* Parte visible inicialmente */
+}
+
+.card .back {
+    background-color: white;
+    /* Fondo donde está el símbolo */
+    opacity: 0;
+    /* Oculta la figura inicialmente */
+    transition: opacity 0.3s ease;
+    /* Suaviza el cambio de opacidad */
+}
+
+.card.flipped .back {
+    opacity: 1;
+    /* Muestra la figura cuando se hace clic */
+}
+
+.card.flipped .front {
+    opacity: 0;
+    /* Oculta la parte delantera */
+}

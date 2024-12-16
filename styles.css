@@ -1,0 +1,84 @@
+html,
+body {
+    height: 100%;
+    /* Asegura que el body y html ocupen todo el alto de la ventana */
+    margin: 0;
+    /* Elimina cualquier margen predeterminado */
+    padding: 0;
+    /* Elimina cualquier padding predeterminado */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: black;
+}
+
+.container {
+    gap: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+h1 {
+    color: chartreuse;
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 5%;
+    text-align: center;
+}
+
+h2{    
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 5%;
+    text-align: center;
+}
+p {
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 3% 10%;
+}
+
+/* Estilo de las cards */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    /* Ancho fijo para todas las tarjetas */
+    height: 470px;
+    /* Altura fija para todas las tarjetas */
+    margin-bottom: 5%;
+    overflow: hidden;
+    /* Evita desbordamientos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra para darle un efecto visual */
+}
+
+
+.card-body {
+    text-align: center;
+}
+
+.card .card-image img {
+    width: 100%;
+    /* Ajusta la imagen al ancho de la tarjeta */
+    height: 200px;
+    /* Mantén la proporción de la imagen */
+    object-fit: cover;
+    /* Recorta la imagen si es necesario */
+}
+
+.btn{
+    background-color: blue;
+    color: white;
+    border-color: blue;
+    font-size: larger;
+    width: 50%;    
+}
