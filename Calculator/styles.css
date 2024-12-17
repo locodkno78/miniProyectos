@@ -1,24 +1,19 @@
+/* Estilos base */
 body {
-    background-color: black;    
+    background-color: black;
     margin: 2% 0;
-    /* Elimina márgenes predeterminados */
     height: 100vh;
-    /* Ocupa toda la altura del viewport */
     display: flex;
-    /* Activa Flexbox */
     flex-direction: column;
-    /* Apila los elementos verticalmente */
     justify-content: center;
-    /* Centra verticalmente */
     align-items: center;
-    /* Centra horizontalmente */
     text-align: center;
 }
 
 h1 {
     color: chartreuse;
     font-size: 80px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;    
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 p {
@@ -29,13 +24,13 @@ p {
     padding: 3% 10%;
 }
 
-.btn{
+.btn {
     margin-bottom: 5%;
 }
 
 .calculator {
     display: block;
-    margin:0 auto;
+    margin: 0 auto;
     padding: 20px;
     background-color: rgb(93, 240, 8);
     width: 350px;
@@ -50,7 +45,7 @@ p {
     font-size: 25px;
 }
 
-#result{
+#result {
     display: block;
     text-align: center;
     font-size: 40px;
@@ -59,5 +54,71 @@ p {
     height: 100px;
     line-height: 100px;
     background-color: beige;
-    border-radius: 25px;        
+    border-radius: 25px;
+}
+
+/* MEDIA QUERIES PARA RESPONSIVE */
+
+/* Tablets y pantallas medianas (ancho menor a 768px) */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 60px; /* Reducir tamaño del título */
+        margin: 10px 0;
+    }
+
+    p {
+        font-size: 20px; /* Reducir tamaño del texto */
+        padding: 2% 5%;
+    }
+
+    .calculator {
+        width: 300px;
+        height: 450px;
+        padding: 15px;
+    }
+
+    .calculator td button {
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+    }
+
+    #result {
+        font-size: 30px;
+        width: 250px;
+        height: 80px;
+        line-height: 80px;
+    }
+}
+
+/* Teléfonos móviles (ancho menor a 480px) */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 40px; /* Reducir título aún más */
+        margin: 5px 0;
+    }
+
+    p {
+        font-size: 16px;
+        padding: 3% 5%;
+    }
+
+    .calculator {
+        width: 250px;
+        height: 400px;
+        padding: 10px;
+    }
+
+    .calculator td button {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    #result {
+        font-size: 25px;
+        width: 200px;
+        height: 70px;
+        line-height: 70px;
+    }
 }

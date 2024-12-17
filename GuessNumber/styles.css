@@ -1,18 +1,13 @@
+/* Estilos base */
 body {
     background-color: black;
     color: white;
-    margin: 0;
-    /* Elimina márgenes predeterminados */
-    height: 100vh;
-    /* Ocupa toda la altura del viewport */
-    display: flex;
-    /* Activa Flexbox */
-    flex-direction: column;
-    /* Apila los elementos verticalmente */
-    justify-content: center;
-    /* Centra verticalmente */
-    align-items: center;
-    /* Centra horizontalmente */
+    margin: 0; /* Elimina márgenes */
+    height: 100vh; /* Ocupa toda la altura del viewport */
+    display: flex; /* Activa Flexbox */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
     text-align: center;
 }
 
@@ -30,10 +25,68 @@ p {
     padding: 5% 10%;
 }
 
-.a{
+.a {
     font-size: 20px;
 }
 
 .input-group {
     width: 250px;
+}
+
+/* MEDIA QUERIES PARA RESPONSIVE */
+
+/* Tablets y pantallas medianas (ancho menor a 768px) */
+@media screen and (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 5px; /* Pequeño padding adicional */
+        height: auto; /* Evita problemas de altura fija */
+    }
+
+    h1 {
+        font-size: 60px; /* Reducción de tamaño */
+        margin: 10px 0;
+    }
+
+    .name,
+    p {
+        font-size: 20px;
+        padding: 3% 8%;
+    }
+
+    .a {
+        font-size: 16px;
+    }
+
+    .input-group {
+        width: 200px; /* Reducción del ancho */
+    }
+}
+
+/* Teléfonos móviles (ancho menor a 480px) */
+@media screen and (max-width: 480px) {
+    body {
+        margin: 0;
+        padding: 5px; /* Ajuste mínimo de padding */
+        height: auto; /* Altura automática */
+    }
+
+    h1 {
+        font-size: 40px; /* Tamaño aún más pequeño */
+        margin: 5px 0;
+    }
+
+    .name,
+    p {
+        font-size: 16px; /* Reducción de texto */
+        padding: 3% 5%;
+    }
+
+    .a {
+        font-size: 14px; /* Texto pequeño */
+    }
+
+    .input-group {
+        width: 150px; /* Ajuste más pequeño para dispositivos móviles */
+    }
 }

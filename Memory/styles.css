@@ -1,25 +1,20 @@
+/* Estilos base */
 body {
     background-color: black;
     color: white;
-    margin: 2% 0;
-    /* Elimina márgenes predeterminados */
-    height: 100vh;
-    /* Ocupa toda la altura del viewport */
+    margin: 2% 0; /* Márgenes predeterminados */
+    height: 100vh; /* Ocupa toda la altura del viewport */
     display: flex;
-    /* Activa Flexbox */
     flex-direction: column;
-    /* Apila los elementos verticalmente */
     justify-content: center;
-    /* Centra verticalmente */
     align-items: center;
-    /* Centra horizontalmente */
     text-align: center;
 }
 
 h1 {
     color: chartreuse;
     font-size: 80px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;    
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 p {
@@ -27,10 +22,6 @@ p {
     font-size: 30px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 3% 10%;
-}
-
-.input-group {
-    width: 250px;
 }
 
 .gameBoard {
@@ -69,24 +60,93 @@ p {
 
 .card .front {
     background-color: #444;
-    /* Parte visible inicialmente */
 }
 
 .card .back {
     background-color: white;
-    /* Fondo donde está el símbolo */
     opacity: 0;
-    /* Oculta la figura inicialmente */
     transition: opacity 0.3s ease;
-    /* Suaviza el cambio de opacidad */
 }
 
 .card.flipped .back {
     opacity: 1;
-    /* Muestra la figura cuando se hace clic */
 }
 
 .card.flipped .front {
     opacity: 0;
-    /* Oculta la parte delantera */
+}
+
+/* MEDIA QUERIES PARA RESPONSIVE */
+
+/* Tablets y pantallas medianas (ancho menor a 768px) */
+@media screen and (max-width: 768px) {
+    body {
+        margin: 0; /* Elimina márgenes para aprovechar todo el espacio */
+        padding: 5px; /* Agrega un pequeño padding */
+    }
+
+    h1 {
+        font-size: 60px; /* Reducción de tamaño */
+        margin: 10px 0;
+    }
+
+    p {
+        font-size: 20px;
+        padding: 5% 8%;
+        margin: 10px 0;
+    }
+
+    .gameBoard {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 300px;
+        gap: 8px;
+    }
+
+    .card {
+        width: 80px;
+        height: 80px;
+        font-size: 30px;
+    }
+
+    .card .front,
+    .card .back {
+        font-size: 40px;
+    }
+}
+
+/* Teléfonos móviles (ancho menor a 480px) */
+@media screen and (max-width: 480px) {
+    body {
+        margin: 0; /* Elimina márgenes */
+        padding: 5px; /* Añade un padding mínimo */
+        height: auto; /* Evita problemas con 100vh en móviles */
+    }
+
+    h1 {
+        font-size: 30px;
+        margin: 5px 0;
+    }
+
+    p {
+        font-size: 14px;
+        padding: 3% 5%;
+        margin: 5px 0;
+    }
+
+    .gameBoard {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 90%;
+        gap: 5px;
+    }
+
+    .card {
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+    }
+
+    .card .front,
+    .card .back {
+        font-size: 25px;
+    }
 }
