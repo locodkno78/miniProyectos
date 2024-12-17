@@ -83,6 +83,7 @@ p {
 .card-text {
     font-size: 20px;
     margin: 10px 0;
+    color: black;
 }
 
 .btn {
