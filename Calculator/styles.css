@@ -1,0 +1,63 @@
+body {
+    background-color: black;    
+    margin: 2% 0;
+    /* Elimina márgenes predeterminados */
+    height: 100vh;
+    /* Ocupa toda la altura del viewport */
+    display: flex;
+    /* Activa Flexbox */
+    flex-direction: column;
+    /* Apila los elementos verticalmente */
+    justify-content: center;
+    /* Centra verticalmente */
+    align-items: center;
+    /* Centra horizontalmente */
+    text-align: center;
+}
+
+h1 {
+    color: chartreuse;
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;    
+}
+
+p {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 3% 10%;
+}
+
+.btn{
+    margin-bottom: 5%;
+}
+
+.calculator {
+    display: block;
+    margin:0 auto;
+    padding: 20px;
+    background-color: rgb(93, 240, 8);
+    width: 350px;
+    height: 500px;
+    border-radius: 25px;
+}
+
+.calculator td button {
+    display: block;
+    width: 70px;
+    height: 70px;
+    font-size: 25px;
+}
+
+#result{
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+    width: 300px;
+    height: 100px;
+    line-height: 100px;
+    background-color: beige;
+    border-radius: 25px;        
+}

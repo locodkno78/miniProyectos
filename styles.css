@@ -50,35 +50,54 @@ p {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 300px;
-    /* Ancho fijo para todas las tarjetas */
-    height: 470px;
-    /* Altura fija para todas las tarjetas */
+    width: 300px; /* Ancho fijo para todas las tarjetas */
+    height: 470px; /* Altura fija para todas las tarjetas */
     margin-bottom: 5%;
-    overflow: hidden;
-    /* Evita desbordamientos */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Sombra para darle un efecto visual */
+    overflow: hidden; /* Evita desbordamientos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle un efecto visual */
+    background-color: white; /* Fondo para que el contenido destaque */
+    border-radius: 8px; /* Bordes redondeados */
 }
 
+.card-img-top {
+    width: 100%; /* Ajusta la imagen al ancho de la tarjeta */
+    height: 200px; /* Altura fija para la imagen */
+    object-fit: cover; /* La imagen se recorta para llenar el espacio */
+}
 
 .card-body {
+    flex: 1; /* Hace que el contenido del body se expanda para ocupar el espacio */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espaciado entre título, texto y botón */
     text-align: center;
+    padding: 15px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluye padding en el tamaño total */
+    align-items: center;
 }
 
-.card .card-image img {
-    width: 100%;
-    /* Ajusta la imagen al ancho de la tarjeta */
-    height: 200px;
-    /* Mantén la proporción de la imagen */
-    object-fit: cover;
-    /* Recorta la imagen si es necesario */
+.card-title {
+    font-size: 30px;
+    margin: 10px 0;
 }
 
-.btn{
+.card-text {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.btn {
     background-color: blue;
     color: white;
-    border-color: blue;
+    border: none;
     font-size: larger;
-    width: 50%;    
+    width: 60px; /* Botón ocupa el 70% de la card */
+    padding: 10px; /* Espaciado interno del botón */
+    margin-top: 10px; /* Separación con respecto al contenido */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+.btn:hover {
+    background-color: darkblue;
 }
