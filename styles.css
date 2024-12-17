@@ -29,7 +29,7 @@ h1 {
     text-align: center;
 }
 
-h2 {    
+h2 {
     font-size: 40px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin-top: 5%;
@@ -41,6 +41,7 @@ p {
     font-size: 25px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 3% 10%;
+    color: white;
 }
 
 .card {
@@ -120,13 +121,15 @@ p {
     }
 
     .container {
-        flex-direction: column; /* Apila las tarjetas */
+        flex-direction: column;
+        /* Apila las tarjetas */
         gap: 20px;
         margin-top: 3%;
     }
 
     .card {
-        width: 80%; /* Tarjetas más anchas en tablets */
+        width: 80%;
+        /* Tarjetas más anchas en tablets */
         height: auto;
     }
 
@@ -164,7 +167,8 @@ p {
     }
 
     .card {
-        width: 90%; /* Ocupa casi todo el ancho */
+        width: 90%;
+        /* Ocupa casi todo el ancho */
         height: auto;
         margin-bottom: 10%;
     }
