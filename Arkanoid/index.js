@@ -172,6 +172,7 @@ document.getElementById("btnOk").addEventListener("click", function () {
       gameRunning = true;
       draw();
     }
+
     // Movimiento de la nave
     function movimientoNave() {
       if (rightPressed && naveX < canvas.width - naveWidth) naveX += 8;
@@ -183,7 +184,7 @@ document.getElementById("btnOk").addEventListener("click", function () {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
     }
 
-    // Inicializar eventos
+    // Inicializar eventos para teclado
     function initEvents() {
       document.addEventListener("keydown", (event) => {
         if (event.key == "Right" || event.key == "ArrowRight") rightPressed = true;
@@ -193,6 +194,25 @@ document.getElementById("btnOk").addEventListener("click", function () {
       document.addEventListener("keyup", (event) => {
         if (event.key == "Right" || event.key == "ArrowRight") rightPressed = false;
         if (event.key == "Left" || event.key == "ArrowLeft") leftPressed = false;
+      });
+
+      // Eventos táctiles para dispositivos móviles
+      let touchStartX = 0;
+
+      canvas.addEventListener("touchstart", (e) => {
+        touchStartX = e.touches[0].clientX;
+      });
+
+      canvas.addEventListener("touchmove", (e) => {
+        e.preventDefault();
+        const touchMoveX = e.touches[0].clientX;
+        const touchDiff = touchMoveX - touchStartX;
+        if (touchDiff > 10 && naveX < canvas.width - naveWidth) {
+          naveX += 8;
+        } else if (touchDiff < -10 && naveX > 0) {
+          naveX -= 8;
+        }
+        touchStartX = touchMoveX; // Actualizar posición inicial
       });
     }
 
@@ -212,12 +232,11 @@ document.getElementById("btnOk").addEventListener("click", function () {
     }
 
     // Inicializar el juego
-    //solicitarNombreJugador();
-    inicializarLadrillos(); // Llama a esta función para preparar los ladrillos
+    inicializarLadrillos();
     initEvents();
-    gameRunning = true;     // IMPORTANTE: iniciar el juego
-    draw();                 // Inicia la animación
+    gameRunning = true;
+    draw();
   } else {
     alert("Por favor ingrese un nombre");
   }
-})
+});
