@@ -137,8 +137,7 @@ const createGameBoard = () => {
 
 // Función para reiniciar todo el juego
 const resetGame = () => {
-    Swal.fire({
-        icon: 'error',
+    Swal.fire({        
         title: '¡Muchas Gracias por Jugar!',
         text: `Hasta luego, ${playerName}.`,
         confirmButtonText: 'OK'
